@@ -17,8 +17,8 @@ function App() {
     <>
     <Header/>
     {/* <Cart/> */}
-    <NotFound/>
-    {/* <Home data={data} isLoading={isLoading}/> */}
+    {/* <NotFound/> */}
+    <Home data={data} isLoading={isLoading}/>
     </>
   );
 }
