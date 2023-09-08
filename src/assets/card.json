@@ -1,0 +1,119 @@
+[
+    {
+        "id": 0,
+        "imageUrl": "https://img.mvideo.ru/Big/30064719bb.jpg",
+        "name": "IPhone 14",
+        "sizes": [128, 512],
+        "price": 86990,
+        "category": 1,
+        "rating": 5
+    },
+    {
+        "id": 1,
+        "imageUrl": "https://img.mvideo.ru/Big/30065542bb.jpg",
+        "name": "IPhone 14 Pro",
+        "sizes": [256, 512],
+        "price": 117999,
+        "category": 1,
+        "rating": 1
+    },
+    {
+        "id": 2,
+        "imageUrl": "https://img.mvideo.ru/Big/30065140bb.jpg",
+        "name": "IPhone 14 Pro Max",
+        "sizes": [256, 512],
+        "price": 137990,
+        "category": 1,
+        "rating": 3
+    },
+    {
+        "id": 3,
+        "imageUrl": "https://img.mvideo.ru/Big/30063534bb.jpg",
+        "name": "IPhone 13",
+        "sizes": [256, 512],
+        "price": 65400,
+        "category": 2,
+        "rating": 2
+    },
+    {
+        "id": 4,
+        "imageUrl": "https://img.mvideo.ru/Pdb/30059052b.jpg",
+        "name": "IPhone 13 Pro",
+        "sizes": [256, 512],
+        "price": 72790,
+        "category": 2,
+        "rating": 4
+    },
+    {
+        "id": 5,
+        "imageUrl": "https://hi-stores.ru/upload/iblock/4f4/4f46ffae9f157cb1b3cbcbee0a90775a.jpg",
+        "name": "IPhone 13 Pro Max",
+        "sizes": [256, 512],
+        "price": 82890,
+        "category": 2,
+        "rating": 6
+    },
+    {
+        "id": 6,
+        "imageUrl": "https://hi-stores.ru/upload/iblock/e87/e870a9bc8d2895a474ff15d1a517ad1d.jpg",
+        "name": "IPhone 12",
+        "sizes": [256, 512],
+        "price": 56400,
+        "category": 3,
+        "rating": 8
+    },
+    {
+        "id": 7,
+        "imageUrl": "https://apple-com.ru/image/cache/catalog/product/iphone%2012%20pro/6335c378162da522ea6f4d1663f75220-800x700h.jpg.webp",
+        "name": "IPhone 12 Pro",
+        "sizes": [256, 512],
+        "price": 62730,
+        "category": 3,
+        "rating": 7
+    },
+    {
+        "id": 8,
+        "imageUrl": "https://spb-apple.ru/image/cache/catalog/apple12/apple%2012%20pro%20max/apple12promax_grey_2-700x700.jpg",
+        "name": "IPhone 12 Pro Max",
+        "sizes": [256, 512],
+        "price": 70680,
+        "category": 3,
+        "rating": 11
+    },
+    {
+        "id": 9,
+        "imageUrl": "https://img.mvideo.ru/Big/30063236bb.jpg",
+        "name": "IPhone 11",
+        "sizes": [256, 512],
+        "price": 46900,
+        "category": 4,
+        "rating": 9
+    },
+    {
+        "id": 10,
+        "imageUrl": "https://msk-apple.ru/image/cache/catalog/iPhone11Pro/Gold-700x700.jpg",
+        "name": "IPhone 11 Pro",
+        "sizes": [128, 512],
+        "price": 58900,
+        "category": 4,
+        "rating": 10
+    },
+    {
+        "id": 11,
+        "imageUrl": "https://apple-com.ru/image/cache/catalog/product/iPhone%2011/iphone_11_pro_sg_2-800x700h.jpg.webp",
+        "name": "IPhone 11 Pro Max",
+        "sizes": [128, 256],
+        "price": 64780,
+        "category": 4,
+        "rating": 13
+    },
+    {
+        "id": 12,
+        "imageUrl": "https://store-apple.msk.ru/image/cache/catalog/tovary/iphone/iphone-14-plus/iphone-14-plus-krasnyy-800x800.jpeg",
+        "name": "IPhone 14 Plus",
+        "sizes": [256, 512],
+        "price": 95780,
+        "category": 1,
+        "rating": 12
+    }
+]
