@@ -1,8 +1,7 @@
 import styles from '../styles/Categories.module.sass';
 import React from 'react';
 
-const Categories = ({active, currentActive}) => {
-   
+const Categories = ({category, setCategory}) => {
     const categories = ['Все', 'IPhone 14', 'IPhone 13', 'IPhone 12', 'IPhone 11'];
 
     return (
@@ -11,8 +10,8 @@ const Categories = ({active, currentActive}) => {
                 {categories.map((item, i) => (
                     <li
                         key={i}
-                        className={active === i ? styles.active : ''}
-                        onClick={() => currentActive(i)}
+                        className={category === i ? styles.active : ''}
+                        onClick={() => setCategory(i)}
                     >
                         {item}
                     </li>

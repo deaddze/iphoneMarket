@@ -5,20 +5,16 @@ import axios from 'axios'
 import Home from './pages/Home/Home'
 import NotFound from './pages/NotFound/NotFound'
 import Cart from './pages/Cart/Cart'
+import {Routes, Route} from 'react-router-dom'
 function App() {
-  const [isLoading, setIsLoading] = React.useState(true)
-  const [data, setData] = React.useState([])
-  React.useEffect(() => {
-    axios.get('https://64f785679d7754084953ac39.mockapi.io/items')
-    .then(res=> {setData(res.data); setIsLoading(false);})
-  }, [])
-
   return (
     <>
     <Header/>
-    {/* <Cart/> */}
-    {/* <NotFound/> */}
-    <Home data={data} isLoading={isLoading}/>
+    <Routes>
+    <Route path="/" element={<Home/>}/>
+    <Route path="*" element={<NotFound/>}/>
+    <Route path="/cart" element={<Cart/>}/>
+    </Routes>
     </>
   );
 }

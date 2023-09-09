@@ -1,4 +1,5 @@
 import styles from './NotFound.module.sass'
+import {Link} from 'react-router-dom'
 const NotFound = () => {
     return (
         <div className={styles.notFound}>
@@ -6,7 +7,9 @@ const NotFound = () => {
                 <h1>Ничего не найдено</h1>
                 <p>К сожалению данная страница отстутвует в нашем интернет-магазине</p>
                 <img src='img/box.png'></img>
-                <button>Вернуться назад</button>
+                <Link to="/">
+                    <button>Вернуться назад</button>
+                </Link>
             </div>
         </div>
     )
