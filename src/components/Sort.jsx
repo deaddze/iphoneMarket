@@ -1,6 +1,10 @@
 import styles from '../styles/Sort.module.sass'
 import React from 'react'
-const Sort = ({sortType, setSortType}) => {
+import {useDispatch, useSelector} from 'react-redux'
+import {setSortType} from '../redux/slices/filterSlice'
+const Sort = () => {
+    const sortType = useSelector(state => state.filter.sort)
+    const dispatch = useDispatch()
     const categories = [
     {name: 'популярности', sortProperty: 'rating', type: 'desc'},
     {name: 'возрастанию', sortProperty: 'price', type: 'desc'},
@@ -8,7 +12,7 @@ const Sort = ({sortType, setSortType}) => {
     ]
     const [hidden, setHidden] = React.useState(true)
     function currentItem(item){
-        setSortType(item);
+        dispatch(setSortType(item));
         isHidden()
     }
     function isHidden(){

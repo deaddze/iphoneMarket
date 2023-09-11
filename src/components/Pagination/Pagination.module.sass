@@ -1,0 +1,27 @@
+.pagination
+    display: flex
+    justify-content: center
+    align-items: center
+    li
+        display: inline-block
+        margin-bottom: 50px
+        margin-top: 35px
+    a
+        display: inline-flex
+        font-size: 18px
+        justify-content: center
+        align-items: center
+        margin-right: 10px
+        width: 45px
+        height: 45px
+        border: 1px solid black
+        border-radius: 30px
+        cursor: pointer
+        &:hover
+            background-color: #383838
+            color: white
+:global
+    .selected
+        a
+            background-color: #383838
+            color: white
