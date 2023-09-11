@@ -27,7 +27,7 @@ const Home = () => {
     React.useEffect(() => {
       setIsLoading(true);
       const searchValue = inputValue? `&search=${inputValue}` : ''
-      const categoryType = category > 0? `category=${category}`: '';
+      const categoryType = category > 0? `&category=${category}`: '';
       const page = `page=${currentPage}`;
       const sort = `&sortBy=${sortType.sortProperty}`
       const order = `&order=${sortType.type}`

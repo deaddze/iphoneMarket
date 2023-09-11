@@ -1,23 +1,28 @@
 import styles from './CartItem.module.sass'
 import {useDispatch, useSelector} from 'react-redux';
-const CartItem = () => {
-    return (
-        <li className={styles.cartItem}>
-            <div className={styles.cartItem__item}>
-                <img src='https://img.mvideo.ru/Big/30063534bb.jpg'></img>
-                <div>
-                    <h2>IPhone 14 Pro Max</h2>
-                    <p>256GB</p>
+import {removeItem, decrementCount, addItem} from '../../redux/slices/CartSlice'
+const CartItem = ({id, name, price, imageUrl, size, count}) => {
+    const dispatch = useDispatch();
+    if(count > 0){
+        return (
+            <li className={styles.cartItem}>
+                <div className={styles.cartItem__item}>
+                    <img src={imageUrl}></img>
+                    <div>
+                        <h2>{name}</h2>
+                        <p>{size}GB</p>
+                    </div>
                 </div>
-            </div>
-            <div className={styles.cartItem__btn}>
-                <button>-</button>
-                <p>1</p>
-                <button>+</button>
-            </div>
-                <h2>89760 ₽</h2>
-                <button>x</button>
-        </li>
-    )
+                <div className={styles.cartItem__btn}>
+                    <button onClick={() => dispatch(decrementCount(id))}>-</button>
+                    <p>{count}</p>
+                    <button onClick={() => dispatch(addItem({id}))}>+</button>
+                </div>
+                    <h2>{price * count}₽</h2>
+                    <button onClick={() => dispatch(removeItem({id}))}>x</button>
+            </li>
+        )
+    }
+    return null;
 }
 export default CartItem
