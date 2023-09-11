@@ -1,4 +1,5 @@
 import styles from './CartItem.module.sass'
+import {useDispatch, useSelector} from 'react-redux';
 const CartItem = () => {
     return (
         <li className={styles.cartItem}>

@@ -18,12 +18,12 @@ const Home = () => {
     const [isLoading, setIsLoading] = React.useState(true)
     const currentPage = useSelector(state => state.filter.pageCount)
     const [activeData, setActiveData] = React.useState([])
-    React.useEffect(() => {
-      if(window.location.street){
-        const params = qs.parse(window.location.search.substring(1))
-        console.log(params)
-      }
-    }, [])
+    // React.useEffect(() => {
+    //   if(window.location.street){
+    //     const params = qs.parse(window.location.search.substring(1))
+    //     console.log(params)
+    //   }
+    // }, [])
     React.useEffect(() => {
       setIsLoading(true);
       const searchValue = inputValue? `&search=${inputValue}` : ''
