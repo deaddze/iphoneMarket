@@ -60,7 +60,7 @@ const Home = () => {
         <Categories/>
         <Sort/>
       </div>
-      <h2>Все Айфоны</h2>
+      <h2 className={styles.title}>Все Айфоны</h2>
       {status === 'error' ? (
       <div>
         <h2>Произошла ошибка</h2>
