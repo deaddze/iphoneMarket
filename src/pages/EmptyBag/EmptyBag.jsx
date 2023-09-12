@@ -10,10 +10,10 @@ const EmptyBag = () => {
                 Вероятнее всего вы еще не заказывали IPhone <br/>
                 Для того, чтобы заказать IPhone, перейди на главную страницу
             </p>
-            <img src='img/empty-bag.png'></img>
+            <img src='img/emptybag.png'></img>
         
             <Link to="/">
-                <span>Вернуться назад</span>
+                <button>Вернуться назад</button>
             </Link>
         
         </div>

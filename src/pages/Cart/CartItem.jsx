@@ -19,7 +19,7 @@ const CartItem = ({id, name, price, imageUrl, size, count}) => {
                     <button onClick={() => dispatch(addItem({id}))}>+</button>
                 </div>
                     <h2>{price * count}₽</h2>
-                    <button onClick={() => dispatch(removeItem({id}))}>x</button>
+                    <button onClick={() => dispatch(removeItem({id, price, count}))}>x</button>
             </li>
         )
     }
