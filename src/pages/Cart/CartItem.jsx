@@ -14,12 +14,12 @@ const CartItem = ({id, name, price, imageUrl, size, count}) => {
                     </div>
                 </div>
                 <div className={styles.cartItem__btn}>
-                    <button onClick={() => dispatch(decrementCount(id))}>-</button>
+                    <button onClick={() => dispatch(decrementCount(id))}>━</button>
                     <p>{count}</p>
-                    <button onClick={() => dispatch(addItem({id}))}>+</button>
+                    <button onClick={() => dispatch(addItem({id}))}>┿</button>
                 </div>
                     <h2>{price * count}₽</h2>
-                    <button onClick={() => dispatch(removeItem({id, price, count}))}>x</button>
+                    <button onClick={() => dispatch(removeItem({id, price, count}))}>✕</button>
             </li>
         )
     }
