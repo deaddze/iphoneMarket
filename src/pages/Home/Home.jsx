@@ -18,39 +18,31 @@ const Home = () => {
     const {inputValue} = React.useContext(SearchContext);
     const category = useSelector(state => state.filter.categoryId);
     const sortType = useSelector(state => state.filter.sort);
-    const activeData = useSelector(state => state.market.items);
     const currentPage = useSelector(state => state.filter.pageCount);
+    const limitCount = useSelector(state => state.filter.limit)
     const {status, items} = useSelector(state => state.market)
+  
     const fetchIPhone = async() => {
       const searchValue = inputValue? `&search=${inputValue}` : '';
       const categoryType = category > 0? `&category=${category}`: '';
       const page = `page=${currentPage}`;
       const sort = `&sortBy=${sortType.sortProperty}`;
       const order = `&order=${sortType.type}`;
- 
+      
       dispatch(
         fetchMarket({
         searchValue,
         categoryType, 
         page,
         sort,
-        order
+        order,
       }))
-
     }
+
     React.useEffect(() => {
       fetchIPhone()
     }, [category, sortType.sortProperty, currentPage, inputValue]);
     
-    React.useEffect(() => {
-      const queryString = qs.stringify({
-        sortProperty: sortType.sortProperty,
-        category, 
-        currentPage
-      });
-      navigate(`?${queryString}`);
-    }
-    , [category, sortType, currentPage, inputValue]);
 
     const phone = items.map(item => (<Card key={item.id} {...item} />));
   
@@ -68,7 +60,7 @@ const Home = () => {
       </div>) : (<div className={styles.cards}>
         {status === 'loading' ? [...new Array(7)].map((_, i) => <Skeleton key={i}/>) : phone}
       </div>)}
-      <Pagination/>
+      {limitCount < items.length && <Pagination/>}
     </div>
     )
 }

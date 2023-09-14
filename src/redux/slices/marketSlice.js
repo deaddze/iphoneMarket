@@ -1,14 +1,14 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
 import axios from 'axios'
-export const fetchMarket = createAsyncThunk('market/fetchMarketStatus',
-    async(params) => {
+export const fetchMarket = createAsyncThunk('market/fetchMarketStatus', async(params) => {
         const {
             searchValue,
             categoryType, 
             page,
             sort,
-            order} = params
-        const res = await axios.get(`https://64f785679d7754084953ac39.mockapi.io/items?${page}${searchValue}&limit=7&${sort}${categoryType}${order}`)
+            order,
+            } = params
+        const res = await axios.get(`https://64f785679d7754084953ac39.mockapi.io/items?${page}${searchValue}$limit=7&${sort}${categoryType}${order}`)
         return res.data
     }
 )

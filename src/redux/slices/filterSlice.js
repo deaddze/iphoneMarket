@@ -7,7 +7,8 @@ const initialState = {
         name: 'популярности',
         sortProperty: 'rating',
         type: 'desc'
-    }
+    },
+    limit: 7,
 }
 
 export const filterSlice = createSlice({
@@ -22,7 +23,7 @@ export const filterSlice = createSlice({
         },
         setPageCount(state, action){
             state.pageCount = action.payload
-        }
+        },
     }
 })
 
