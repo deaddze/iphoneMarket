@@ -7,8 +7,9 @@ export const fetchMarket = createAsyncThunk('market/fetchMarketStatus', async(pa
             page,
             sort,
             order,
+            limit,
             } = params
-        const res = await axios.get(`https://64f785679d7754084953ac39.mockapi.io/items?${page}${searchValue}$limit=7&${sort}${categoryType}${order}`)
+        const res = await axios.get(`https://64f785679d7754084953ac39.mockapi.io/items?${page}${searchValue}${limit}${sort}${categoryType}${order}`)
         return res.data
     }
 )

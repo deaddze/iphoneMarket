@@ -1,8 +1,7 @@
-import React from 'react'
 import ReactPaginate from 'react-paginate'
 import styles from './Pagination.module.sass'
 import {setPageCount} from '../../redux/slices/filterSlice'
-import {useDispatch} from 'react-redux'
+import { useDispatch } from 'react-redux'
 const Pagination = () => {
     const dispatch = useDispatch();
     return (
