@@ -37,7 +37,7 @@ const Home = () => {
 
     React.useEffect(() => {
       fetchIPhone()
-    }, [category, sortType.sortProperty, currentPage, inputValue]);
+    }, [category, sortType.sortProperty, currentPage, inputValue, sortType.type]);
     const phone = items.map(item => (<Card key={item.id} {...item} />));
     return (
     <div className={styles.home}>
